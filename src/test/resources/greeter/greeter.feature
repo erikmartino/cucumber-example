@@ -1,4 +1,4 @@
-Feature: Greeter
+Feature: Greeting Service
 
   Scenario: Default greeting message
     Given a greeting service
@@ -18,11 +18,13 @@ Feature: Greeter
       | Hola      |
       | Ciao      |
 
-  Scenario: Long Greeting
+  Scenario: Multiline string example
     Given a greeting service with a greeting
     """
-    Hello Hello Hello Hello Hello Hello Hello Hello
+    Hello Hello Hello
+    Hello Hello Hello
+    Hello Hello
     """
     When I say hello
-    Then I am greeted with a long greeting
+    Then I get a long greeting
 
